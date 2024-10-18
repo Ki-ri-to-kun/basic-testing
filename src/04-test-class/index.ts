@@ -25,7 +25,7 @@ export class BankAccount {
 
     return this;
   }
-
+  
   public transfer(amount: number, toAccount: BankAccount): this {
     if (this === toAccount) {
       throw new TransferFailedError();
@@ -76,3 +76,5 @@ export class InsufficientFundsError extends Error {
     super(`Insufficient funds: cannot withdraw more than ${balance}`);
   }
 }
+
+
